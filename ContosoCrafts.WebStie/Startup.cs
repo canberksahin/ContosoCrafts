@@ -29,6 +29,7 @@ namespace ContosoCrafts.WebStie
         {
             services.AddRazorPages();
             services.AddControllers();
+            services.AddServerSideBlazor();
             services.AddTransient<JsonFileProductService>();
         }
 
@@ -57,6 +58,7 @@ namespace ContosoCrafts.WebStie
             {
                 endpoints.MapRazorPages();
                 endpoints.MapControllers();
+                endpoints.MapBlazorHub();
                 //endpoints.MapGet("/products", (context) =>
                 // {
                 //     var products = app.ApplicationServices.GetService<JsonFileProductService>().GetProducts();
